@@ -1,0 +1,17 @@
+mixin link(name, link)
+  li.header__item
+    a.header__link(href= link)= name
+
+header
+  .logo
+    img.logo__image(href= 'link')
+  ol.header__list
+    +link('Новости', 'href')
+    +link('Лучшие студенты', 'href')
+    +link('Курсовые и дипломные проекты', 'href')
+    +link('Библиотека', 'href')
+    +link('Практика', 'href')
+    +link('Демонстрационный экзамен', 'href')
+  .auth
+    button.auth__login
+    button.auth__signup
