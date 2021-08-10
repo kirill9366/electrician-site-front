@@ -1,25 +1,223 @@
 header
   display: flex
+  position: fixed
   justify-content: space-around
+  align-items: center
+  right: 0
+  left: 0
+  padding: 0 13.5%
   height: 134px
   background-color: #001F42
+
+  @media (max-width: 1800px)
+    padding: 0 7%
+
+  @media (max-width: 1600px)
+    padding: 0 0
+
+  @media (max-width: 1400px)
+    justify-content: space-between
+    height: 73px
+    padding: 0 12px
+
+.logo__img
+  @media (max-width: 1400px)
+    height: 22px
+    width: 80px
 
 .header__list
   display: flex
   justify-content: space-between
+  width: 100%
+  max-width: 891px
+
+  @media (max-width: 1400px)
+    position: absolute
+    flex-direction: column
+    justify-content: start
+    height: 324px
+    max-width: none
+    top: 73px
+    right: -100%
+    transition: right .3s linear
+    background-color: #001F42
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 
 .header__item
   display: flex
   align-items: center
 
+  @media (max-width: 1400px)
+    padding: 0 12px
+    height: 47px
+
+.link_theme_white
+  color: #FFFFFF
+
+.link_theme_dark
+  color: #373737
+
+
 .header__link
+  position: relative
   font-family: Montserrat
-  text-decoration: none
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 17px
+  cursor: pointer
+
+  &:after
+    content: ' '
+    position: absolute
+    top: 20px
+    display: block
+    height: 2px
+    width: 0
+    background-color: #08B108
+
+  &:hover
+    transition-duration: .3s
+    color: #08B108
+
+  &:hover:after
+    transition: width .3s linear
+    width: 100%
+
+  @media (max-width: 1400px)
+    font-family: Montserrat
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+
+
+.header__link_active
+  @extend .header__link
+  color: #08B108
+
+  &::after
+    content: ' '
+    position: absolute
+    top: 20px
+    display: block
+    height: 2px
+    width: 100%
+    background-color: #08B108
+
+.auth
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 257px
+
+  @media (max-width: 1400px)
+    position: inherit
+    justify-content: space-around
+    align-items: flex-end
+    flex-direction: row-reverse
+    background-color: #001F42
+    top: 397px
+    bottom: 0
+    right: -100%
+    transition: right .3s linear
+    padding-bottom: 47px
+    width: 100%
+
+.auth__login
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+  @media (max-width: 1400px)
+    height: 46px
+    width: 183px
+    justify-content: center
+    border-radius: 5px
+    background-color: #08B108
+
+.auth__login_img
+  display: none
+
+  @media (max-width: 1400px)
+
+  height: 16px
+  width: 16px
+  margin-right: 4px
+
+.auth__login_text
+  position: relative
+  font-family: Montserrat
   font-style: normal
   font-weight: normal
   font-size: 14px
   line-height: 17px
 
-  /* identical to box height */
+  @media (max-width: 1400px)
+    font-weight: 600
+    line-height: 17px
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
 
+.auth__signup
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 46px
+  width: 183px
+  border-radius: 5px
+  background-color: #08B108
+
+.auth__signup_img
+  height: 24px
+  width: 24px
+
+.auth__signup_text
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 17px
+  text-align: center
+  text-transform: uppercase
   color: #FFFFFF
+
+.burger_menu
+  display: none
+  cursor: pointer
+  height: 20px
+  width: 23px
+
+  @media (max-width: 1400px)
+    display: block
+
+.burger_menu__button
+  position: relative
+  display: block
+  width: 23px
+  height: 2px
+  background-color: white
+
+  &:before
+    content: ' '
+    position: absolute
+    top: 6px
+    left: 10px
+    display: block
+    width: 13px
+    height: 2px
+    background-color: white
+
+  &:after
+    content: ' '
+    position: absolute
+    top: 12px
+    left: 18px
+    display: block
+    width: 5px
+    height: 2px
+    background-color: white
+
+.header__active_burger
+  right: 0

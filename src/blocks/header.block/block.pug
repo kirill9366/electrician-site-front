@@ -1,17 +1,29 @@
-mixin link(name, link)
+mixin link(name, link, active=false, theme='white')
   li.header__item
-    a.header__link(href= link)= name
+    if active
+      a.header__link_active(href= link)= name
+    else
+      if theme == 'white'
+        a.header__link.link_theme_white(href= link)= name
+      else if theme == 'black'
+        a.header__link.link_theme_black(href= link)= name
 
 header
   .logo
-    img.logo__image(href= 'link')
+    img.logo__img(src= '../images/logo.png')
   ol.header__list
-    +link('Новости', 'href')
+    +link('Новости', 'href', active=true)
     +link('Лучшие студенты', 'href')
     +link('Курсовые и дипломные проекты', 'href')
     +link('Библиотека', 'href')
     +link('Практика', 'href')
     +link('Демонстрационный экзамен', 'href')
   .auth
-    button.auth__login
-    button.auth__signup
+    a.auth__login(href= 'href')
+      img.auth__login_img(src= '../images/login.png')
+      p.auth__login_text.link_theme_white Войти
+    a.auth__signup(href= 'href')
+      img.auth__signup_img(src= '../images/user.png')
+      p.auth__signup_text Регистрация
+  .burger_menu
+    span.burger_menu__button

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link rel="stylesheet" type="text/css" href="../css/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width">
     <title></title>
   </head>
   <body>
     <header>
-      <div class="logo"><img class="logo__image" href="link"></div>
+      <div class="logo"><img class="logo__img" src="../images/logo.png"></div>
       <ol class="header__list">
-            <li class="header__item"><a class="header__link" href="href">Новости</a></li>
-            <li class="header__item"><a class="header__link" href="href">Лучшие студенты</a></li>
-            <li class="header__item"><a class="header__link" href="href">Курсовые и дипломные проекты</a></li>
-            <li class="header__item"><a class="header__link" href="href">Библиотека</a></li>
-            <li class="header__item"><a class="header__link" href="href">Практика</a></li>
-            <li class="header__item"><a class="header__link" href="href">Демонстрационный экзамен</a></li>
+            <li class="header__item"><a class="header__link_active" href="href">Новости</a>
+            </li>
+            <li class="header__item"><a class="header__link link_theme_white" href="href">Лучшие студенты</a>
+            </li>
+            <li class="header__item"><a class="header__link link_theme_white" href="href">Курсовые и дипломные проекты</a>
+            </li>
+            <li class="header__item"><a class="header__link link_theme_white" href="href">Библиотека</a>
+            </li>
+            <li class="header__item"><a class="header__link link_theme_white" href="href">Практика</a>
+            </li>
+            <li class="header__item"><a class="header__link link_theme_white" href="href">Демонстрационный экзамен</a>
+            </li>
       </ol>
-      <div class="auth">
-        <button class="auth__login"></button>
-        <button class="auth__signup"></button>
-      </div>
+      <div class="auth"><a class="auth__login" href="href"><img class="auth__login_img" src="../images/login.png">
+          <p class="auth__login_text link_theme_white">Войти</p></a><a class="auth__signup" href="href"><img class="auth__signup_img" src="../images/user.png">
+          <p class="auth__signup_text">Регистрация</p></a></div>
+      <div class="burger_menu"><span class="burger_menu__button"></span></div>
     </header>
   </body>
+  <script type="text/javascript" src="../js/scripts.min.js"></script>
 </html>
