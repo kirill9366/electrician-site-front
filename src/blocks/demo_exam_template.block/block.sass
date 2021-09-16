@@ -1,0 +1,114 @@
+.demo_exam
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex-grow: 1
+  width: 100%
+  background: linear-gradient(to bottom, #002144 552px, white 2px, white)
+  padding-top: 224px
+
+  @media (max-width: 1000px)
+    padding-top: 102px
+    background: #002144
+
+.demo_exam__title
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  font-size: 36px
+  line-height: 44px
+  text-align: center
+  color: #FFFFFF
+  margin-bottom: 108px
+
+  @media (max-width: 1000px)
+    font-size: 24px
+    line-height: 29px
+    max-width: 309px
+    margin-bottom: 30px
+
+.demo_exam__block
+  display: flex
+  border-radius: 10px
+  background-color: white
+  max-width: 1407px
+  margin-bottom: 120px
+  width: 100%
+
+  @media (max-width: 1435px)
+    margin-left: 14px
+    margin-right: 14px
+    width: auto
+
+  @media (max-width: 1000px)
+    max-width: 388px
+    flex-direction: column
+
+.demo_exam__sidebar
+  max-width: 412px
+  width: 100%
+
+.demo_exam__chapter
+  display: block
+  min-height: 103px
+  min-width: 412px
+  line-height: 103px
+  padding-left: 50px
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  font-size: 24px
+  color: #292C29
+  border: 1px solid rgba(0, 0, 0, 0.1)
+
+  &:first-child
+    border-top-left-radius: 10px
+
+  &:last-child
+    border-bottom-left-radius: 10px
+
+  &_active
+    background: #F2F2F2
+
+  @media (max-width: 1000px)
+    min-height: 56px
+    line-height: 56px
+    min-width: 388px
+    font-size: 18px
+    padding-left: 28px
+
+    &:first-child
+      border-top-right-radius: 10px 
+
+  @media (max-width: 404px)
+    max-width: 388px
+    min-width: auto
+
+
+.demo_exam__subchapter
+  display: block
+  height: 16px
+  line-height: 16px
+  margin: 15px 0
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  color: #373737
+
+  &:before
+    font-family: "Font Awesome 5 Free"
+    content: "\f0da"
+    display: inline-block
+    font-weight:900
+    margin-right: 13px
+
+  @media (max-width: 1000px)
+    font-size: 14px
+
+.demo_exam__content
+  width: 100%
+  padding: 40px 50px
+
+  @media (max-width: 1110px)
+    padding: 40px 28px

@@ -1,0 +1,15 @@
+extends ../demo_exam_template.block/block.pug
+mixin get_calendar_card(num, theme="active")
+  .calendar_card.calendar_card--active
+      p.calendar_card___num= num
+        span.calendar_card__desc desckt
+
+block content
+  .calendar
+    .calendar__info
+      i.calendar__icon#calendar_left(class="fas fa-chevron-left")
+      i.calendar__icon#calendar_right(class="fas fa-chevron-right")
+      .calendar__month_title#month_title Май, 2021
+    .calendar__content#calendar
+      - for (var i = 0; i < 35; i++)
+        +get_calendar_card(i)

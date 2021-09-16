@@ -1,0 +1,31 @@
+- var br = "<br />"
+
+mixin contacts_item(text, icon_class, text_width= false)
+  .contacts__item
+    .contacts__big_icon
+      i(class= icon_class + ' fa-2x')
+    .contacts__small_icon
+      i(class= icon_class + ' fa-1x')
+    if text_width
+      p(style='width: ' + text_width).contacts__text !{text}
+    else
+      .contacts__text= text
+
+section.contacts
+  .contacts__box
+    .contacts__first_title Наши контакты
+    .contacts__block
+      .contacts__inner_border
+        .contacts__second_title Наши контакты
+        .contacts__list
+          +contacts_item('г. Ижевск, ул. Пионерская 65к7', 'fas fa-map-marker-alt contacts__icon')
+          +contacts_item('+ 7 (926) 843-98-98', 'fas fa-phone contacts__icon')
+          +contacts_item('montazhschool@gmail.com', 'fas fa-envelope contacts__icon')
+          +contacts_item(
+            'Режим работы: <br/> Пн-пт: 10:00-19:00 <br/> Сб:     0:00-17:00 <br/> Вс: выходной', 'fas fa-clock contacts__icon', text_width='231px')
+    .contacts__map
+      script(
+        type="text/javascript"
+        charset="utf-8"
+        async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6113afee64d2b63aeed91f2ced0869c244e17fa55a247a2c715e5342dfbfe20a&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
+      )

@@ -1,0 +1,17 @@
+mixin link(name, link)
+  li.footer__item
+    a.footer__link(href= link)= name
+
+footer
+  .top_footer
+    .logo
+      img.logo__img(src= '../images/green_logo.png')
+    ol.footer__list
+      +link('Новости', 'href')
+      +link('Лучшие студенты', 'href')
+      +link('Курсовые и дипломные проекты', 'href')
+      +link('Библиотека', 'href')
+      +link('Практика', 'href')
+      +link('Демонстрационный экзамен', 'href')
+  .lower_footer
+    .footer__text Copyright Montazh © 2021

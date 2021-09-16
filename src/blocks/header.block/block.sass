@@ -1,12 +1,14 @@
 header
   display: flex
   position: fixed
+  z-index: 3
   justify-content: space-around
   align-items: center
   right: 0
   left: 0
   padding: 0 13.5%
   height: 134px
+  margin: 0 auto
   background-color: #001F42
 
   @media (max-width: 1800px)
@@ -201,6 +203,7 @@ header
 
   &:before
     content: ' '
+    background-color: white
     position: absolute
     top: 6px
     left: 10px

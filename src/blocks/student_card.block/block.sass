@@ -1,0 +1,51 @@
+.student_card
+  display: block
+  max-width: 450px
+  height: 491px
+  width: 100%
+  padding: 14px 12px
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+
+  @media (max-width: 550px)
+    max-width: 388px
+    height: 424px 
+
+  @media (max-width: 360px)
+    height: 380px
+
+.student_card__inner_block
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border: 1px solid rgba(8, 177, 8, 0.15)
+  box-sizing: border-box
+  border-radius: 5px
+  padding: 16px 18px
+  height: 463px
+
+  @media (max-width: 550px)
+    height: 401px
+
+  @media (max-width: 360px)
+    height: 350px
+
+.student_card__img
+  width: 100%
+
+.student_card__name
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  font-size: 24px
+  line-height: 29px
+  text-align: center
+  color: #292C29
+
+  @media (max-width: 550px)
+    font-size: 18px
+    line-height: 22px
+
+  @media (max-width: 360px)
+    font-size: 13px

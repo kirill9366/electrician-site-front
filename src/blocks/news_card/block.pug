@@ -1,0 +1,6 @@
+mixin news_card(title, description, image, link)
+  a.news_card(href= link)
+    .news_card__inner
+      img.news_card__img(src= image)
+      p.news_card__title= title
+      p.news_card__description= description

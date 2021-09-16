@@ -1,0 +1,39 @@
+.pagination
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-bottom: 120px
+
+  @media (max-width: 600px)
+    padding-bottom: 71px
+
+  @media (max-width: 500px)
+    padding-top: 41px
+
+.pagination__button
+  display: block
+  width: 40px
+  height: 45px
+  line-height: 45px
+  margin: 0 3px
+  border: 1px solid #CACACA
+  box-sizing: border-box
+  border-radius: 2px
+  font-family: Montserrat
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  text-align: center
+  letter-spacing: -0.07em
+  color: #CACACA
+
+  @media (max-width: 600px)
+    width: 26px
+    height: 30px
+    font-size: 14px
+    line-height: 30px
+
+.pagination__button_active
+  background-color: #08B108
+  border: none
+  color: white

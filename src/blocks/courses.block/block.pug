@@ -1,0 +1,11 @@
+include ../course_card.block/block.pug
+section.courses
+  p.courses__title Практика
+  p.courses__subtitle В этом разделе вы сможете ознакомиться с практикой по курсам
+  .courses__content
+    .courses__card
+      +get_course_card('2')
+    .courses__card
+      +get_course_card('2')
+    .courses__card
+      +get_course_card('2')
