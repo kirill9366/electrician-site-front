@@ -10,10 +10,6 @@ var sass = require('gulp-sass')(require('sass')); // переводит SASS в 
     pug = require('gulp-pug');
     browserSync = require('browser-sync');
 
-/* --------------------------------------------------------
-   ----------------- Таски ---------------------------
------------------------------------------------------------- */
-
 gulp.task('pug', function buildHTML() {
   return gulp.src('src/pages/*.pug')
   .pipe(pug({
@@ -24,9 +20,8 @@ gulp.task('pug', function buildHTML() {
   .pipe(browserSync.stream());
 });
 
-// Объединение, компиляция Sass в CSS, простановка венд. префиксов и дальнейшая минимизация кода
 gulp.task("sass", function() {
-    return gulp.src(['src/sass/*.sass','src/blocks/**/*.sass', 'src/pages/**/*.sass', 'src/elements/**/*.sass'])
+    return gulp.src(['src/sass/*.sass',"src/components/***/**/*.sass", 'src/pages/**/*.sass', 'src/elements/**/*.sass'])
         .pipe(concat('styles.sass'))
         .pipe(sass())
         // .pipe(autoprefixer({
@@ -39,7 +34,6 @@ gulp.task("sass", function() {
         .pipe(browserSync.stream()) ;
 });
 
-// Объединение и сжатие JS-файлов
 gulp.task("scripts", function() {
     return gulp.src("src/js/*.js") // директория откуда брать исходники
         .pipe(concat('scripts.js')) // объеденим все js-файлы в один 
@@ -49,7 +43,6 @@ gulp.task("scripts", function() {
         .pipe(browserSync.stream());
 });
 
-// Сжимаем картинки
 gulp.task('imgs', function() {
     return gulp.src("src/images/*.+(jpg|jpeg|png|gif)")
         .pipe(imagemin({
@@ -61,7 +54,6 @@ gulp.task('imgs', function() {
         .pipe(browserSync.stream());
 });
 
-// Задача слежения за измененными файлами
 gulp.task("myserv", function myServer() {
     browserSync.init({
         server: {
@@ -70,12 +62,13 @@ gulp.task("myserv", function myServer() {
         notify: false       // отключаем уведомления
     });
 
-    gulp.watch("src/blocks/**/*.pug", gulp.series("pug"));
+    gulp.watch("src/components/***/**/*.pug", gulp.series("pug"));
     gulp.watch("src/pages/*.pug", gulp.series("pug"));
     gulp.watch("src/js/*.js", gulp.series("scripts"));
-    gulp.watch(['src/sass/*.sass','src/blocks/**/*.sass', 'src/pages/**/*.sass', 'src/elements/**/*.sass'], gulp.series("sass"));
+    gulp.watch(['src/sass/*.sass',"src/components/***/**/*.sass", 'src/pages/**/*.sass', 'src/elements/**/*.sass'], gulp.series("sass"));
     gulp.watch("src/images/*.+(jpg|jpeg|png|gif)",  gulp.series("imgs"));
 });
+
 gulp.task("watch", function() {
     gulp.watch("src/blocks/**/*.pug", gulp.series("pug"));
     gulp.watch("src/pages/*.pug", gulp.series("pug"));

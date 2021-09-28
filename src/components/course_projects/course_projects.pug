@@ -1,0 +1,7 @@
+include course_project_card/block.pug
+.course_projects
+  .course_projects__title Курсовые и дипломные проекты
+  .course_projects__content
+    - for (var i = 0; i < 1; i++)
+      a.course_projects__card(href="href")
+        +get_course_project_card()

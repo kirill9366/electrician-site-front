@@ -3,13 +3,14 @@
   flex-direction: column
   justify-content: space-around
   padding: 100px 0
-  min-height: 1098px
   width: 100%
 
-  @media (max-width: 1550px)
-    min-height: 1668px
+  @media (max-width: 400px)
+    padding: 100px 12px
 
 .preview_news__title
+  margin-bottom: 65px
+
   font-family: Montserrat
   font-style: normal
   font-weight: bold
@@ -19,7 +20,14 @@
 
   color: #292C29
 
-.preview_news__cards
+  @media (max-width: 600px)
+    margin-bottom: 20px
+
+    font-size: 24px
+    line-height: 29px
+
+
+.preview_news__content
   display: flex
   justify-content: space-around
   flex-wrap: wrap
@@ -32,19 +40,29 @@
     flex-direction: column
     justify-content: space-between
     flex-wrap: nowrap
-    height: 1383px
+
+.preview_news__card
+  margin: 10px 15px
 
 .preview_news__link
-  width: 355px
+  width: 100%
+  max-width: 355px
   height: 74px
   margin: 0 auto
-  background: #08B108
+  margin-top: 50px
+  margin-bottom: 115px
   border-radius: 5px
+
   font-family: Montserrat
   font-style: normal
   font-weight: 600
   font-size: 18px
   line-height: 74px
   text-align: center
+
   color: #FFFFFF
-  margin-top: 50px
+  background: #08B108
+
+  @media (max-width: 400px)
+    font-size: 18px
+    margin-bottom: 0

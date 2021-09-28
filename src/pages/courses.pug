@@ -1,27 +1,4 @@
-html(lang="ru")
-  head
-    link(
-      rel="stylesheet"
-      type="text/css"
-      href="../css/styles.css"
-    )
-    meta(
-      name="viewport"
-      content="width=device-width"
-    )
-    link(
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    )
-    title
-  body
-    include ../blocks/header.block/block.pug
-    .content
-      include ../blocks/courses.block/block.pug
-    include ../blocks/footer.block/block.pug
-  script(
-    type='text/javascript'
-    src='../js/scripts.min.js'
-  )
+extends base.pug
+
+block content
+  include ../components/courses/courses.block/block.pug

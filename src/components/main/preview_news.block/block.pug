@@ -1,0 +1,10 @@
+include ../../news/news_card/block.pug
+section.preview_news
+  p.preview_news__title Новости
+  .preview_news__content
+    - for (var i = 0; i < 1; i++)
+      .preview_news__card
+        +news_card("ПЕРВАЯ НОВОСТЬ", "Ключевые особенности структуры проекта смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Как принято считать, активно развивающиеся ",
+        "../images/news_card_item.png",
+        "href")
+  a.preview_news__link(href= 'href') Больше новостей
