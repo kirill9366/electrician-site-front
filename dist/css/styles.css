@@ -633,6 +633,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #B5B6B5;
+  padding-bottom: 30px;
 }
 @media (max-width: 1000px) {
   .demo_exam_paragraph {
