@@ -1035,6 +1035,10 @@ header {
   }
 }
 
+.logo__img {
+  width: 114px;
+  height: 34px;
+}
 @media (max-width: 1400px) {
   .logo__img {
     height: 22px;
