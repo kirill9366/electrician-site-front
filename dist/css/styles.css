@@ -648,18 +648,22 @@ body {
   flex-wrap: wrap;
 }
 
-.demo_exma_category {
+.demo_exam__category {
   max-width: 257px;
   margin-bottom: 100px;
   width: 100%;
 }
 @media (max-width: 1000px) {
-  .demo_exma_category {
+  .demo_exam__category {
     margin-bottom: 50px;
   }
-  .demo_exma_category:last-child {
+  .demo_exam__category:last-child {
     margin-bottom: 0;
   }
+}
+
+.demo_exam__content .library_item__content {
+  padding: 0;
 }
 
 .demo_exam__result {
