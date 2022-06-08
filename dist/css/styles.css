@@ -202,6 +202,7 @@ body {
 
 .demo_exam__img {
   width: 95%;
+  margin-bottom: 10px;
 }
 
 .course_project_card {
@@ -670,15 +671,6 @@ body {
   padding: 0;
 }
 
-.demo_exam__result {
-  margin-bottom: 61px;
-}
-@media (max-width: 1000px) {
-  .demo_exam__result {
-    margin-bottom: 50px;
-  }
-}
-
 .demo_exam {
   display: flex;
   flex-direction: column;
@@ -813,6 +805,15 @@ body {
 @media (max-width: 1110px) {
   .demo_exam__content {
     padding: 40px 28px;
+  }
+}
+
+.demo_exam__result {
+  margin-bottom: 61px;
+}
+@media (max-width: 1000px) {
+  .demo_exam__result {
+    margin-bottom: 50px;
   }
 }
 
