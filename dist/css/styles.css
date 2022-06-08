@@ -200,6 +200,10 @@ body {
   }
 }
 
+.demo_exam__img {
+  width: 95%;
+}
+
 .course_project_card {
   width: 100%;
   max-width: 450px;
